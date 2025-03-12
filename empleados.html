@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empleados - Tienda de Yates</title>
+    <style>
+        body {
+            font-family: "Georgia", serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+        }
+        header {
+            background: linear-gradient(to right, #003366, #00509d);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+        nav {
+            background: #004080;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            background-color: #002244;
+            border-radius: 8px;
+        }
+        .empleados {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 40px auto;
+            width: 80%;
+        }
+        .empleado {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        .empleado img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .empleado h3 {
+            margin: 15px 0;
+            font-size: 22px;
+            color: #004080;
+        }
+        .empleado p {
+            color: #666;
+            font-size: 16px;
+        }
+        #btnSubir {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        #btnSubir:hover {
+            background-color: #002244;
+        }
+    </style>
+</head>
+<body>
+<header>
+  <h1>Nuestro Equipo</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="empleados.html">Empleados</a></li>
+    </ul>
+</nav>
+<section id="empleados">
+  <div class="empleados">
+    <div class="empleado">
+          <img src="fotos/empleado1.jpg">
+          <h3>Hermin Garduza Piste</h3>
+          <p>Capitan de nuestra embarcacion que lleva 10 años con nosotros y con mucha experiencia y confiable para los viajes
+          </p>
+    </div>
+    <div class="empleado">
+            <img src="fotos/empleado2.jpg">
+            <h3>Ignacio Delgado</h3>
+            <p>Marinero de nuestra embarcacion con bastante experienza de buena confianza </p>
+    </div>
+    <div class="empleado">
+          <img src="fotos/empleado3.jpg">
+          <h3>Francisco Mayillo</h3>
+          <p>Chef de nuestra lancha que cuenta con variedad de platillos tradicionales y internacionales</p>
+    </div>
+    <div class="empleado">
+          <img src="fotos/empleado4.jpg">
+          <h3>Miguel Ayala</h3>
+          <p>Pescador de nustra confianza que cuenta con muycha experienza en la pesca </p>
+    </div>
+
+</section>
+<button id="btnSubir" onclick="subirPagina()">⬆️</button>
+<script>
+  function subirPagina() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+</body>
+</html>

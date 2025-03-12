@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Yates</title>
+    <style>
+        body {
+            font-family: "Georgia", serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(to right, #003366, #00509d);
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .productos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            padding: 40px;
+        }
+        .producto {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 320px;
+        }
+        .producto img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .producto h3 {
+            margin: 15px 0;
+            font-size: 22px;
+            color: #004080;
+        }
+        .producto p {
+            color: #666;
+            font-size: 16px;
+        }
+        nav {
+            background: #004080;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            background-color: #002244;
+            border-radius: 8px;
+        }
+
+        #btnSubir {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        #btnSubir:hover {
+            background-color: #002244;
+        }
+    </style>
+</head>
+<body>
+<!-- Botón flotante de subir -->
+<button id="btnSubir" onclick="subirPagina()">⬆️</button>
+<header>
+    <h1>Catálogo de Yates</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="empleados.html">Empleados</a></li>
+    </ul>
+</nav>
+
+<section class="productos">
+    <div class="producto">
+        <img src="fotos/2005-tiara-yachts-4400-sovran-power-9598680-20241030153510778-1_XLARGE.jpg" alt="Yate 1">
+        <h3>Yate 8 pies </h3>
+        <p>yate de 8 pies con  interior que incluye camarote y dormitorio .</p>
+    </div>
+    <div class="producto">
+        <img src="fotos/7418622_20210910100436900_1_XLARGE.jpg" alt="Yate 2">
+        <h3>lancha de pesca</h3>
+        <p>lancha de pesca con motores susuki 160.</p>
+    </div>
+    <div class="producto">
+        <img src="fotos/2007-silverton-45-convertible-power-9524479-20240828185116974-1_XLARGE.jpg" alt="Yate 3">
+        <h3>Yate de 6 pies </h3>
+        <p>incluye dormitorio,literas,cocina,regadera y mesa para comer.</p>
+    </div>
+    <div class="producto">
+        <img src="fotos/8785836_20230824145218136_1_XLARGE.jpg" alt="Yate 1">
+        <h3>Yate de 9 pies</h3>
+        <p>incluye 2 dormitorios,sala de estar,comedor y sanitarios.</p>
+    </div>
+    <div class="producto">
+        <img src="fotos/8906896_20230614114941623_1_XLARGE.jpg" alt="Yate 2">
+        <h3>Yate de 2 pies</h3>
+        <p>incluye un dormitorio,sala con mesa,una litera y un inodoro.</p>
+    </div>
+    <div class="producto">
+        <img src="fotos/D_NQ_NP_866775-MLM79552444145_092024-O.webp" alt="Yate 3">
+        <h3>Yate Modelo 6</h3>
+        <p>cuenta con 2 dormitorio,un comedor,una estufa,microondas y una television</p>
+    </div>
+</section>
+<script>
+    function subirPagina() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+        // Mostrar popup después de subir
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function cerrarPopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
